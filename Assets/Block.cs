@@ -5,19 +5,24 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    public static int BlockCount = 0;
+    [SerializeField] int BlockHealth = 1;
+    SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-        BlockCount++;
+        if(GameManager.Instance)
+        {
+            GameManager.Instance.OnBlockCreated();
+        }
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.color = GameManager.Instance.BlockColors[BlockHealth-1];
     }
 
     private void OnDestroy()
     {
-        BlockCount--;
-        if(BlockCount == 0)
+        if(GameManager.Instance)
         {
-            Debug.Log("All blocks destroyed!");
+            GameManager.Instance.OnBlockDestroyed();
         }
     }
 
@@ -28,6 +33,14 @@ public class Block : MonoBehaviour
 
     private void HandleHit()
     {
-        Destroy(gameObject);
+        BlockHealth--;
+        if (BlockHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            spriteRenderer.color = GameManager.Instance.BlockColors[BlockHealth - 1];
+        }
     }
 }

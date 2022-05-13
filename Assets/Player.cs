@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] GameObject ball;
-    [SerializeField] float startPower = 1000f;
+    [SerializeField] Ball ball;
+    [SerializeField] float startPower = 500f;
+    public Vector3 ballOffset = new Vector2(0f, 0.4f);
     [SerializeField] float movingAreaLength = 16.4f;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        ball = FindObjectOfType<Ball>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.GamePaused)
+            return;
+
         HandleMovement();
 
         HandleLeftClick();
@@ -37,15 +40,16 @@ public class Player : MonoBehaviour
             newPosX = Mathf.Max(mouseWorldPos.x, -movingAreaLength / 2);
         }
 
-        transform.position = new Vector2(newPosX, transform.position.y);
+        //rigidbody.MovePosition(new Vector2(newPosX, transform.position.y));
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(newPosX, transform.position.y), 100f * Time.deltaTime);
     }
 
     void HandleLeftClick()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !GameManager.Instance.HasStarted)
         {
-            ball.transform.parent = null;
-            ball.GetComponent<Rigidbody2D>().AddForce(Vector2.up * startPower);
+            ball.BallStart(startPower);
+            GameManager.Instance.HasStarted = true;
         }
     }
 }
