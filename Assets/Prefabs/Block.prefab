@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2609234159544274794}
   - component: {fileID: 4782604122127749481}
-  - component: {fileID: 1325322893122317279}
   - component: {fileID: 3967146787409015470}
+  - component: {fileID: -1008655015299626532}
+  - component: {fileID: 7448731814384695081}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -86,19 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1325322893122317279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2329977935788045285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0372332baa8864fac2244f588a11a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BlockHealth: 1
 --- !u!60 &3967146787409015470
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -132,3 +120,30 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.25}
       - {x: 0.46705532, y: -0.010558605}
       - {x: 0.5, y: 0.25}
+--- !u!114 &-1008655015299626532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2329977935788045285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35abba955514fcb48aef5fd0d06070aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 9e61d61f16cfd7e459afce650f274afb, type: 3}
+--- !u!114 &7448731814384695081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2329977935788045285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0372332baa8864fac2244f588a11a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockHealth: 1
+  hitSound: {fileID: 0}

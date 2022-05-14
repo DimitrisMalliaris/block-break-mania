@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4502768094043094788}
   - component: {fileID: 4502768094043094794}
   - component: {fileID: 4502768094043094789}
+  - component: {fileID: 2048064511}
   m_Layer: 0
   m_Name: Wall-Down
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4502768094043094791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.5, z: 0}
-  m_LocalScale: {x: 18, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -8, z: 0}
+  m_LocalScale: {x: 27.002037, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4502768095854387111}
@@ -111,6 +112,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2048064511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502768094043094791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88218ce4ea2d724ba16734cc5869198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLosesOnCollision: 1
+  ballVelocityChange: {x: 0, y: 0}
 --- !u!1 &4502768094956100835
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +137,8 @@ GameObject:
   - component: {fileID: 4502768094956100832}
   - component: {fileID: 4502768094956100838}
   - component: {fileID: 4502768094956100833}
+  - component: {fileID: 1949492392859720931}
+  - component: {fileID: 440672360}
   m_Layer: 0
   m_Name: Wall-Left
   m_TagString: Untagged
@@ -137,8 +154,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4502768094956100835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.395, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 11, z: 1}
+  m_LocalPosition: {x: -13, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4502768095854387111}
@@ -222,6 +239,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1949492392859720931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502768094956100835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35abba955514fcb48aef5fd0d06070aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 842d36bf8dbbe0445b9ee8e5016304d8, type: 3}
+--- !u!114 &440672360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502768094956100835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88218ce4ea2d724ba16734cc5869198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLosesOnCollision: 0
+  ballVelocityChange: {x: 10, y: 5}
 --- !u!1 &4502768095136221660
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +277,8 @@ GameObject:
   - component: {fileID: 4502768095136221661}
   - component: {fileID: 4502768095136221603}
   - component: {fileID: 4502768095136221602}
+  - component: {fileID: 8099014457626129046}
+  - component: {fileID: 602203031}
   m_Layer: 0
   m_Name: Wall-Right
   m_TagString: Untagged
@@ -248,8 +294,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4502768095136221660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.395, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 11, z: 1}
+  m_LocalPosition: {x: 13, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4502768095854387111}
@@ -333,6 +379,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8099014457626129046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502768095136221660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35abba955514fcb48aef5fd0d06070aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 842d36bf8dbbe0445b9ee8e5016304d8, type: 3}
+--- !u!114 &602203031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502768095136221660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88218ce4ea2d724ba16734cc5869198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLosesOnCollision: 0
+  ballVelocityChange: {x: 10, y: 5}
 --- !u!1 &4502768095299155656
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +417,8 @@ GameObject:
   - component: {fileID: 4502768095299155657}
   - component: {fileID: 4502768095299155663}
   - component: {fileID: 4502768095299155662}
+  - component: {fileID: 501803882609351834}
+  - component: {fileID: 304950987}
   m_Layer: 0
   m_Name: Wall-Up
   m_TagString: Untagged
@@ -359,8 +434,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4502768095299155656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.5, z: 0}
-  m_LocalScale: {x: 18, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalScale: {x: 26, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4502768095854387111}
@@ -444,6 +519,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &501803882609351834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502768095299155656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35abba955514fcb48aef5fd0d06070aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 842d36bf8dbbe0445b9ee8e5016304d8, type: 3}
+--- !u!114 &304950987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502768095299155656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88218ce4ea2d724ba16734cc5869198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLosesOnCollision: 0
+  ballVelocityChange: {x: 5, y: 10}
 --- !u!1 &4502768095854387110
 GameObject:
   m_ObjectHideFlags: 0
