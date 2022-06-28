@@ -1,4 +1,4 @@
-# Block Break - Mania | Unity 2021.3.2f1
+# Block Breaker - Mania | Unity 2021.3.2f1
 
 ## Main Menu
 ![main-menu](https://user-images.githubusercontent.com/73944749/172872612-19a931db-ebd6-4291-8b51-a9494cc262b7.gif)

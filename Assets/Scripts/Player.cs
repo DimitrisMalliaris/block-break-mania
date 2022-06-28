@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         else
             AutoplayMovement();
 
-        HandleLeftClick();
+        HandleMouseClick();
     }
 
     private void AutoplayMovement()
@@ -64,12 +64,22 @@ public class Player : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(newPosX, transform.position.y), 100f * Time.deltaTime);
     }
 
-    void HandleLeftClick()
+    void HandleMouseClick()
     {
         if (Input.GetMouseButtonDown(0) && !GameManager.Instance.HasStarted)
         {
             ball.BallStart(startPower);
             GameManager.Instance.HasStarted = true;
+        }
+
+        if(Input.GetMouseButtonDown(1) && GameManager.Instance.HasStarted)
+        {
+            ball.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        if(Input.GetMouseButtonUp(1) && GameManager.Instance.HasStarted)
+        {
+            ball.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         }
     }
 }

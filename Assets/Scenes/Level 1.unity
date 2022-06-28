@@ -3465,7 +3465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8967730218442019039, guid: bef560a4e9dacf849952a628727543e6, type: 3}
       propertyPath: autoplay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8967730218442019039, guid: bef560a4e9dacf849952a628727543e6, type: 3}
       propertyPath: movingAreaLength
