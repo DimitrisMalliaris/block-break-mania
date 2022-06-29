@@ -1,5 +1,7 @@
 # Block Breaker - Mania | Unity 2021.3.2f1
 
+![BB-Mania-sq-96](https://user-images.githubusercontent.com/73944749/176411513-cb4bc2fb-98be-46c4-a187-d7acc2f117c0.png)
+
 ## Main Menu
 ![main-menu](https://user-images.githubusercontent.com/73944749/172872612-19a931db-ebd6-4291-8b51-a9494cc262b7.gif)
 
